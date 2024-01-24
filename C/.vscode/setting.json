@@ -1,0 +1,14 @@
+{
+
+    "code-runner.executorMap": {
+        "c": "cd $dir && clang $fileName -o build/$fileNameWithoutExt && $dir/build/$fileNameWithoutExt",
+        "cpp": "cd $dir && clang++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": false,
+  
+
+    "C_Cpp.autocomplete": "disabled",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.arguments": []
+}

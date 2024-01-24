@@ -1,0 +1,64 @@
+// 在装了 C/C++ 插件后右上角 run C/C++ file 会自动生成该文件。
+// 清不要随意更改，除非你知道你在干什么。
+{
+  "version": "2.0.0",
+  "tasks": [
+      {
+         // mac 端
+          "type": "cppbuild",
+          // 任务名称
+          "label": "C/C++: clang 生成活动文件",
+          // 执行编译的文件的路径
+          "command": "/usr/bin/clang",
+          // 传递的参数
+          "args": [
+              "-fcolor-diagnostics",
+              "-fansi-escape-codes",
+              "-g",
+              "${file}",
+              "-o",
+              "${fileDirname}/build/${fileBasenameNoExtension}"
+          ],
+          // 其他命令
+          "options": {
+              "cwd": "${fileDirname}"
+          },
+          "problemMatcher": [
+              "$gcc"
+          ],
+          // 任务组
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          // 批注
+          "detail": "调试器生成的任务。"
+      },
+      {
+        // win 端
+          "type": "cppbuild",
+          "label": "C/C++: gcc.exe 生成活动文件",
+          "command": "D:/LLVM-MinGW/bin/gcc.exe",
+          "args": [
+              "-fdiagnostics-color=always",
+              "-g",
+              "${file}",
+              "-o",
+              "${fileDirname}\\${fileBasenameNoExtension}.exe"
+          ],
+          "options": {
+              "cwd": "D:/LLVM-MinGW/bin"
+          },
+          "problemMatcher": [
+              "$gcc"
+          ],
+          // 任务组
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          // 批注
+          "detail": "调试器生成的任务。"
+      }
+  ]
+}
